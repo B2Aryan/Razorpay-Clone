@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.footer-links a {
+  color: #0d72e7;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #6b7280;
+  text-decoration: underline;
+}
