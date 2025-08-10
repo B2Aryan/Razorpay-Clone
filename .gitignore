@@ -5,8 +5,8 @@ yarn-debug.log*
 yarn-error.log*
 
 # Build outputs
-dist/
-build/
+# dist/ - temporarily allowing for initial push
+# build/
 
 # Environment variables
 .env
@@ -16,8 +16,8 @@ build/
 .env.production.local
 
 # IDE files
-.vscode/
-.idea/
+# .vscode/ - temporarily allowing for initial push
+# .idea/
 *.swp
 *.swo
 *~
