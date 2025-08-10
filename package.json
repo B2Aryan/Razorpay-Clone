@@ -1,0 +1,25 @@
+{
+  "name": "tailwind-css-project",
+  "version": "1.0.0",
+  "description": "A modern website built with Tailwind CSS v3",
+  "main": "index.html",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build:prod": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "serve": "npx http-server . -p 3000 -o"
+  },
+  "keywords": [
+    "tailwind",
+    "css",
+    "responsive",
+    "modern"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32"
+  }
+}
