@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "A modern website built with Tailwind CSS v3",
   "main": "index.html",
-  "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "build:prod": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
-    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "serve": "npx http-server . -p 3000 -o"
-  },
+ "scripts": {
+  "clean": "rimraf dist",
+  "build:css": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+  "copy:assets": "cpr index.html dist -o && cpr images dist/images -o",
+  "build": "npm-run-all clean copy:assets build:css",
+  "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+},
   "keywords": [
     "tailwind",
     "css",
@@ -18,8 +19,11 @@
   "author": "Your Name",
   "license": "MIT",
   "devDependencies": {
-    "tailwindcss": "^3.4.0",
     "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.32"
+    "cpr": "^3.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.32",
+    "rimraf": "^6.0.1",
+    "tailwindcss": "^3.4.0"
   }
 }

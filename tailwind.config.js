@@ -1,9 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./*.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}"
+    "./**/*.{html,js,ts,jsx,tsx}", // Scan ALL html/js files in the project
+  ],
+  safelist: [
+    { pattern: /bg-\[url\(.+\)\]/ }, // Keep all bg-[url(...)] classes
   ],
   theme: {
     extend: {
